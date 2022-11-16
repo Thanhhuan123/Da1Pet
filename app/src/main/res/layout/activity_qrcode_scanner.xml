@@ -10,6 +10,8 @@
     android:paddingTop="16dp"
     tools:context=".QRCode.QRCodeScanner">
 
+
+
     <ImageView
         android:layout_centerHorizontal="true"
         android:id="@+id/imageHinh"
