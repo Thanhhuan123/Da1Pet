@@ -1,5 +1,6 @@
 package com.example.da1pet.home;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 
@@ -13,7 +14,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+import com.example.da1pet.Lienhe;
 import com.example.da1pet.R;
+import com.example.da1pet.Thongbao;
 
 import java.util.ArrayList;
 
@@ -28,11 +31,18 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        ImageView imageView = view.findViewById(R.id.thongbao);
         ImageView slideshow = view.findViewById(R.id.homeslideshow);
         slideshow.setBackgroundResource(R.drawable.home_slideshow);
         AnimationDrawable animationDrawable = (AnimationDrawable) slideshow.getBackground();
         animationDrawable.start();
 
+
+
+        imageView.findViewById(R.id.thongbao).setOnClickListener(v -> {
+            Intent intent = new Intent(this.getActivity(), Thongbao.class);
+            startActivity(intent);
+        });
 
 //        NonScrollGridView gridView = view.findViewById(R.id.lv);
 //        gridView.setNumColumns(2);

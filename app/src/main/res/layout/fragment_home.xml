@@ -29,12 +29,14 @@
                 android:background="@color/white"
                 android:layout_margin="10dp"
                 android:layout_height="wrap_content"/>
+
             <ImageButton
+                android:id="@+id/thongbao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_notifications_24"
                 android:layout_margin="10dp"
-                android:background="@color/white"/>
+                android:background="@color/white"
+                android:src="@drawable/ic_baseline_notifications_24" />
         </LinearLayout>
 
 
