@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,7 @@ import java.util.ArrayList;
 
 public class Home extends Fragment {
     DbRoom db;
+    String TAG = "zzzzzzzzz";
     ArrayList<Products> list;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

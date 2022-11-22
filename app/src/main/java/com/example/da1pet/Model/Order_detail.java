@@ -17,12 +17,12 @@ public class Order_detail {
     @NonNull
     private String id_order;
     private String quantity;
-    private String id_products;
+    private Integer id_products;
 
     public Order_detail() {
     }
 
-    public Order_detail(String id_order, String quantity, String id_products) {
+    public Order_detail(String id_order, String quantity, Integer id_products) {
         this.id_order = id_order;
         this.quantity = quantity;
         this.id_products = id_products;
@@ -44,12 +44,11 @@ public class Order_detail {
         this.quantity = quantity;
     }
 
-    public String getId_products() {
+    public Integer getId_products() {
         return id_products;
     }
 
-    public void setId_products(String id_products) {
+    public void setId_products(Integer id_products) {
         this.id_products = id_products;
     }
-
 }
