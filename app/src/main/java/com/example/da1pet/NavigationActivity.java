@@ -1,5 +1,6 @@
 package com.example.da1pet;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.Menu;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -55,11 +57,26 @@ public class NavigationActivity extends AppCompatActivity {
                 menuItem = menu.findItem(R.id.nav_user);
                 menuItem.setVisible(false);
             }else {
-
+                menu = navigationView.getMenu();
+                menuItem = menu.findItem(R.id.nav_login);
+                menuItem.setVisible(false);
             }
         }catch (Exception e){
             e.getMessage();
         }
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.nav_login){
+                    Intent intent = new Intent(NavigationActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                }else {
+                    NavigationUI.onNavDestinationSelected(item, navController);
+                    drawer.closeDrawers();
+                }
+                return false;
+            }
+        });
 
     }
 
