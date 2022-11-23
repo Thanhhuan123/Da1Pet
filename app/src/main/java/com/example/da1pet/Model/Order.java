@@ -8,15 +8,13 @@ import androidx.room.PrimaryKey;
 
 @Entity(foreignKeys = {@ForeignKey(entity = User.class, parentColumns = "id_user", childColumns = "id_user", onDelete = ForeignKey.CASCADE)})
 public class Order {
-    @PrimaryKey
-    @NonNull
-    private String id_order;
+    @PrimaryKey(autoGenerate = true)
+    private Integer id_order;
     private String id_user;
     private String status;
     private String total;
 
-    public Order(String id_order, String id_user, String status, String total) {
-        this.id_order = id_order;
+    public Order(String id_user, String status, String total) {
         this.id_user = id_user;
         this.status = status;
         this.total = total;
@@ -25,11 +23,11 @@ public class Order {
     public Order() {
     }
 
-    public String getId_order() {
+    public Integer getId_order() {
         return id_order;
     }
 
-    public void setId_order(String id_order) {
+    public void setId_order(Integer id_order) {
         this.id_order = id_order;
     }
 

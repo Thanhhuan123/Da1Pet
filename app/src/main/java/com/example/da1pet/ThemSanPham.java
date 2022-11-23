@@ -53,7 +53,7 @@ public class ThemSanPham extends AppCompatActivity {
             }
         }
 
-        edtid = findViewById(R.id.edt_id);
+
         edtname = findViewById(R.id.edt_tensp);
         edtinventory = findViewById(R.id.edt_inventory);
         ArrayList<Categorys> list = new ArrayList<>();

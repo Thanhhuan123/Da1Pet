@@ -1,6 +1,7 @@
 package com.example.da1pet;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
@@ -17,7 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.da1pet.databinding.ActivityNavigationBinding;
 
 public class NavigationActivity extends AppCompatActivity {
-
+    Menu menu;
+    MenuItem menuItem;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityNavigationBinding binding;
 
@@ -47,6 +49,18 @@ public class NavigationActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        try {
+            if(getIntent().getExtras().getString("username").equals("")){
+                menu = navigationView.getMenu();
+                menuItem = menu.findItem(R.id.nav_user);
+                menuItem.setVisible(false);
+            }else {
+
+            }
+        }catch (Exception e){
+            e.getMessage();
+        }
+
     }
 
     @Override
