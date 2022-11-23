@@ -101,28 +101,31 @@
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:gravity="center"/>
-
-
         </LinearLayout>
 
-        <androidx.cardview.widget.CardView
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <TextView-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Thêm sản phẩm"-->
+<!--                android:textSize="24dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:background="@color/white"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:id="@+id/tvthemsp"-->
+<!--                >-->
+
+<!--            </TextView>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="525dp" />
 
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Thêm sản phẩm"
-                android:textSize="24dp"
-                android:textStyle="bold"
-                android:background="@color/white"
-                android:textColor="@color/black"
-                android:id="@+id/tvthemsp"
-                >
-
-            </TextView>
-        </androidx.cardview.widget.CardView>
     </LinearLayout>
-
 </LinearLayout>
