@@ -38,6 +38,10 @@
                     android:title="Doanh thu"
                     android:icon="@drawable/ic_doanh_thu"/>
 
+                <item android:id="@+id/nav_TopHang"
+                    android:title="Top Hàng bán chạy"
+                    android:icon="@drawable/ic_baseline_request_quote_24"/>
+
             </menu>
         </item>
         <item android:title="">

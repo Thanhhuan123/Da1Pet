@@ -90,6 +90,8 @@ public class NavigationActivity extends AppCompatActivity {
                     menuItem5.setVisible(false);
                     MenuItem menuItem6 = menu.findItem(R.id.nav_DoanhThu);
                     menuItem6.setVisible(false);
+                    MenuItem menuItem7 = menu.findItem(R.id.nav_TopHang);
+                    menuItem7.setVisible(false);
                 }
                 menu = navigationView.getMenu();
                 menuItem = menu.findItem(R.id.nav_login);

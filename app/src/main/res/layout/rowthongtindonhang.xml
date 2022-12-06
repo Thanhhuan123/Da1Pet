@@ -25,17 +25,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:textSize="18dp"
+                    android:textSize="24dp"
                     android:id="@+id/tvtensp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/soluong"/>
+                    android:id="@+id/soluong"
+                    android:textSize="24dp"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#EA1313"
-                    android:textSize="16dp"
+                    android:textSize="24dp"
                     android:id="@+id/tvprice"/>
             </LinearLayout>
         </LinearLayout>
